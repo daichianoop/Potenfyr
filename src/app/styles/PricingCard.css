@@ -1,0 +1,50 @@
+.pricing-card {
+    background: transparent;
+    backdrop-filter: blur(10px);
+    transition: all 0.4s;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 5px  rgba(0, 0, 0, 0.705);
+}
+
+.pricing-card:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px 5px  rgba(0, 0, 0, 0.705);
+    background: transparent;
+    backdrop-filter: blur(20px);
+}
+
+.pricing-first-content {
+    height: 100%;
+    width: 100%;
+    transition: all 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    border-radius: 15px;
+}
+
+.pricing-card:hover .pricing-first-content {
+    height: 0;
+    opacity: 0;
+}
+
+.pricing-second-content {
+    height: 0;
+    width: 100%;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    transition: all 0.4s;
+    transform: rotate(90deg) scale(-1);
+}
+
+.pricing-card:hover .pricing-second-content {
+    opacity: 1;
+    height: 100%;
+    transform: rotate(0deg);
+}
